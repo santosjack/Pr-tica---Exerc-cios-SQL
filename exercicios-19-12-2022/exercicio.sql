@@ -69,8 +69,6 @@ CREATE TABLE "custommerAdresses" (
   	"custommerId" integer UNIQUE NOT NULL
 );
 
-ALTER TABLE "users" ADD CONSTRAINT "users_fk0" FOREIGN KEY ("mainAddressId") REFERENCES "addresses"("id");
-
 ALTER TABLE "bankAccounts" ADD CONSTRAINT "bankAccounts_fk0" FOREIGN KEY ("custommerId") REFERENCES "custommers"("id");
 
 ALTER TABLE "transactions" ADD CONSTRAINT "transactions_fk0" FOREIGN KEY ("bankAcccountId") REFERENCES "bankAccounts"("id");
